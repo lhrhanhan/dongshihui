@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import bottom from '@/components/index/bottom'
 import login from '@/components/login/login'
 import reg from '@/components/login/register'
+import resetPwd from '@/components/login/forgetPassword'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: reg
+    },
+    {
+      path: '/resetPwd',
+      name: 'resetPwd',
+      component: resetPwd
     }
   ]
 })
