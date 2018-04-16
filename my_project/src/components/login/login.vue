@@ -11,14 +11,14 @@
     </div>
     <div class="content">
       <div class="tel">
-        <input type="text" placeholder="手机号">
+        <input type="text" placeholder="手机号" ref="phone">
       </div>
       <div class="password">
-        <input type="password" placeholder="密码">
+        <input type="password" placeholder="密码" ref="pwd">
       </div>
     </div>
     <div class="footer">
-      <input type="button" value="登录">
+      <input type="button" value="登录" @click="clogin">
     </div>
 
     <div class="last">
@@ -30,7 +30,30 @@
 
 <script>
     export default {
-        name: "login"
+      name: "login",
+      data () {
+        return {
+
+        }
+      },
+      mounted () {
+
+      },
+      methods : {
+        clogin () {
+          let ph = ''
+          let pw = ''
+          ph = this.$refs.phone.value
+          pw = this.$refs.pwd.value
+          this.$request({
+            type : 'GET',
+            url : `api/user/login?userName=${ph}&passWord=38684B57F4B691182815377185C900FB`,
+            success : function (res) {
+              console.log(res.data)
+            }
+          })
+        }
+      }
     }
 </script>
 

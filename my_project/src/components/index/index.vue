@@ -16,7 +16,7 @@
       mounted () {
         this.$request({
           type: 'GET',
-          url: 'api/allCtgy?',
+          url: 'api/adwap/loadAds?adids=1%7C2%7C3%7C4%7C5',
           success: function (res) {
             console.log(res.data)
           }

@@ -15,7 +15,7 @@ module.exports = {
         target: 'http://www.dshui.cc',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/goodswap'
+          '^/api': ''
         },
         headers: {
           Host: 'www.dshui.cc'
